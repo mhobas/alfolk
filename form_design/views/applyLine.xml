@@ -1,0 +1,250 @@
+<odoo>
+            <record model="ir.ui.view" id="form_line_kanban">
+            <field name="name">form_design Kanban</field>
+            <field name="model">form.apply.line</field>
+            <field name="arch" type="xml">
+                <kanban sample="1">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+
+                            <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+
+                                <div class="oe_kanban_details">
+                                    <div class="o_kanban_record_top">
+                                        <div class="o_kanban_record_headings">
+                                            <strong class="o_kanban_record_title">
+                                                <field name="name" placeholder="Form Title"/>
+                                                <br/>
+                                            </strong>
+                                            <span class="o_kanban_record_subtitle">
+                                                <field name="user_id"/>
+                                            </span>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                    <div class="hr_activity_container float-right">
+                                </div>
+                                <div class="oe_kanban_content position-absolute fixed-bottom mr-2 ">
+                                    <div class="o_kanban_record_bottom">
+                                        <div class="oe_kanban_bottom_left"/>
+
+                                    </div>
+                                    <div class="o_kanban_record_bottom">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+
+            </field>
+        </record>
+  <record id="form_apply_line_form_view" model="ir.ui.view">
+        <field name="name">form.apply.line</field>
+        <field name="model">form.apply.line</field>
+        <field name="arch" type="xml">
+            <form string="" create="0" edit="1">
+                    <header>
+                    <field name="has_next" invisible="1"/>
+                    <button name="confirm_view" type="object" class="btn-primary" attrs="{'invisible':['|',('has_next','=',False),('can_edit','=',False)]}" string="Next"/>
+                    <button name="confirm_view" type="object" class="btn-primary" attrs="{'invisible':['|',('has_next','=',True),('can_edit','=',False)]}" string="Done"/>
+                     <button name="%(action_report_form_line)d" string="Print" class="btn btn-link" type="action" />
+
+                </header>
+                    <h2 class="o_row d-flex justify-content-between">
+                        <span>
+                            <field name="question_type" force_save="1" readonly="1" invisible="1"/>
+                            <field name="form_line_id" force_save="1" attrs="{'readonly':[('id','!=',False)]}"/>
+                            <field name="id" invisible="1"/>
+                            <field name="state" force_save="1" invisible="1"/>
+                            <field name="can_edit" force_save="1" invisible="1"/>
+
+                        </span>
+
+                    </h2>
+                    <group>
+                            <field name="matrix_answer_type" readonly="1" force_save="1" invisible="1" />
+
+
+                        <group>
+                            <field name="numerical_box" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','numerical_box')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','numerical_box')]}"/>
+                            <field name="text_char" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','char_box')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','char_box')]}"/>
+                            <field name="text" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','text_box')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','text_box')]}"/>
+                            <field name="date" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','date')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','date')]}"/>
+                            <field name="check" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','check')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','check')]}"/>
+                            <field name="date_time" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','datetime')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','datetime')]}"/>
+                            <field name="suggested_id" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','simple_choice')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','simple_choice')]}"/>
+                            <field name="suggested_ids" widget="many2many_tags" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','multiple_choice')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','multiple_choice')]}"/>
+                        </group>
+                        <group>
+                        </group>
+                        <group>
+                            <field name="apply_id" force_save="1" readonly="1"  invisible="1" />
+                            <field name="form_id" force_save="1" invisible="1" />
+                            <field name="employee_id"  attrs="{'readonly':[('can_edit','=',False)]}"/>
+
+
+                        </group>
+                        <group>
+                            <field name="note"  attrs="{'readonly':[('can_edit','=',False)]}"/>
+
+                            <field name="notify_ids" widget="many2many_tags"  attrs="{'readonly':[('can_edit','=',False)]}"/>
+                        </group>
+                    </group>
+
+
+                    <field name="answers_ids" widget="x2many_2d_matrix" field_x_axis="val_name"
+                           field_y_axis="name" field_value="textChar" field_type="type"
+                           string="Answer"
+                           attrs="{'invisible':[('question_type','!=','matrix')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','matrix')]}">
+                        <tree>
+                            <field name="val_name" />
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="check"/>
+                            <field name="date_time"/>
+                            <field name="time"  widget="float_time"/>
+                            <field name="value_id"  domain="['|', ('matrix_line_id','=',col_id),('question_id','=',parent.form_line_id)]" />
+                            <field name="value_ids"  domain="['|', ('matrix_line_id','=',col_id),('question_id','=',parent.form_line_id)]"  widget="many2many_tags"/>
+                            <field name="text"/>
+                            <field name="is_header"/>
+                            <field name="matrix_id" force_save="1"/>
+                            <field name="col_id" force_save="1"/>
+                            <field name="value"/>
+                            <field name="date"/>
+                            <field name="textChar"  attrs="{'required':[('is_required','=',True)]}" />
+                            <field name="is_required"/>
+                            <field name="form_line_id"/>
+                        </tree>
+                    </field>
+                  <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="form_apply_line_tree_view" model="ir.ui.view">
+        <field name="name">form.apply.line</field>
+        <field name="model">form.apply.line</field>
+        <field name="arch" type="xml">
+            <tree string="" create="0" edit="0">
+                <field name="apply_id" string="" force_save="1"/>
+                <field name="name" readonly="1"/>
+                <field name="question_type" readonly="1"/>
+                <field name="answer" readonly="1"/>
+                <field name="state" readonly="1"/>
+            </tree>
+
+        </field>
+    </record>
+
+    <record id="form_apply_line_form_view2" model="ir.ui.view">
+        <field name="name">form.apply.line</field>
+        <field name="model">form.apply.line</field>
+        <field name="arch" type="xml">
+            <form string="" create="0" edit="0">
+                <sheet>
+                    <h2 class="o_row d-flex justify-content-between">
+                        <span>
+                            <field name="question_type" force_save="1" readonly="1" invisible="1"/>
+                            <field name="form_line_id" force_save="1" attrs="{'readonly':[('id','!=',False)]}"/>
+                            <field name="form_id" force_save="1" invisible="1" />
+                            <field name="id" invisible="1"/>
+                            <field name="state" force_save="1" invisible="1"/>
+                            <field name="can_edit" force_save="1" invisible="1"/>
+                        </span>
+
+                    </h2>
+                    <group>
+                        <group>
+                            <field name="numerical_box" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','numerical_box')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','numerical_box')]}"/>
+                            <field name="text_char" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','char_box')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','char_box')]}"/>
+                            <field name="text" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','text_box')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','text_box')]}"/>
+                            <field name="date" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','date')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','date')]}"/>
+                            <field name="check" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','check')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','check')]}"/>
+                            <field name="date_time" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','datetime')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','datetime')]}"/>
+                            <field name="suggested_id" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','simple_choice')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','simple_choice')]}"/>
+                            <field name="suggested_ids" widget="many2many_tags" string="Answer" force_save="1"
+                                   attrs="{'invisible':[('question_type','!=','multiple_choice')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','multiple_choice')]}"/>
+                        </group>
+                        <group>
+                        </group>
+                        <group>
+                                                        <field name="apply_id" force_save="1" readonly="1" invisible="0"/>
+
+                            <field name="employee_id" attrs="{'readonly':[('can_edit','=',False)]}"/>
+
+                        </group>
+                        <group>
+                                                            <field name="note" attrs="{'readonly':[('can_edit','=',False)]}"/>
+
+                                                        <field name="notify_ids" widget="many2many_tags" attrs="{'readonly':[('can_edit','=',False)]}"/>
+
+                        </group>
+                    </group>
+                    <field name="matrix_answer_type" readonly="1" force_save="1" invisible="1"/>
+
+                    <field name="answers_ids" widget="x2many_2d_matrix" field_x_axis="val_name"
+                           field_y_axis="matrix_id" field_value="textChar" field_type="type" field_datetime="date_time"
+                           string="Answer"
+                           attrs="{'invisible':[('question_type','!=','matrix')],'readonly':[('can_edit','=',False)],'required':[('question_type','=','matrix')]}">
+                        <tree>
+                            <field name="val_name" />
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="check"/>
+                            <field name="date_time"/>
+                            <field name="text"/>
+                            <field name="value"/>
+                            <field name="time"  widget="float_time"/>
+                            <field name="value_id" domain="['|', ('matrix_line_id','=',col_id),('question_id','=',parent.form_line_id)]" />
+                            <field name="value_ids" domain="['|', ('matrix_line_id','=',col_id),('question_id','=',parent.form_line_id)]" />
+                            <field name="col_id" />
+                            <field name="is_header"/>
+                            <field name="date"/>
+                            <field name="matrix_id"/>
+                            <field name="textChar"  attrs="{'required':[('is_required','=',True)]}" />
+                            <field name="is_required"/>
+                            <field name="form_line_id"/>
+                        </tree>
+                    </field>
+
+                </sheet>
+
+                <footer>
+                    <field name="has_next" invisible="1"/>
+                    <button name="confirm" type="object" class="btn-primary" attrs="{'invisible':[('has_next','=',False)]}" string="Next"/>
+                    <button name="confirm" type="object" class="btn-primary" attrs="{'invisible':[('has_next','=',True)]}" string="Done"/>
+                    <button name="save_and_close" type="object" string="Save and Close"/>
+                     <button name="%(action_report_form_line)d" string="Print" class="btn btn-link" type="action" />
+                    <button string="Discard" special="cancel" class="btn-secondary" close="1"/>
+                </footer>
+            </form>
+
+        </field>
+    </record>
+
+</odoo>

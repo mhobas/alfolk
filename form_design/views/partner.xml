@@ -1,0 +1,136 @@
+<odoo>
+   <!-- Inherit Form View to Modify it -->
+   <record id="view_partner_form" model="ir.ui.view">
+       <field name="name">res.partner</field>
+       <field name="model">res.partner</field>
+       <field name="inherit_id" ref="base.view_partner_form"/>
+       <field name="arch" type="xml">
+                  <div name="button_box" position="inside">
+                        <field name="is_student" invisible="1" />
+                        <field name="show_achievement" invisible="1" />
+                        <field name="show_resident" invisible="1" />
+                        <button class="oe_stat_button o_res_partner_tip_opp" attrs="{'invisible':[('is_student','=',False)]}" type="object" name="view_closed_forms"  icon="fa-wpforms"
+                         context="{'default_partner_id': active_id}">
+                            <span class="o_stat_text">Closed Forms</span>
+                        </button>
+                      <button class="oe_stat_button o_res_partner_tip_opp" attrs="{'invisible':[('is_student','=',False)]}" type="object" name="open_medical_form" icon="fa-user-md"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Medical File</span>
+
+                        </button>
+                        <button class="oe_stat_button o_res_partner_tip_opp" type="object" attrs="{'invisible':[('is_student','=',False)]}" name="open_physical_measurements" icon="fa-universal-access"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Measurements</span>
+                        </button>
+
+                        <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_nutrition" attrs="{'invisible':[('is_student','=',False)]}" icon="fa-envira"
+                         context="{'default_partner_id': active_id}">
+                            <span class="o_stat_text">Nutrition</span>
+
+                        </button>
+                       <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_rate" attrs="{'invisible':[('is_student','=',False)]}" icon="fa-trophy"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Achievement</span>
+                        </button>
+                         <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_timing" attrs="{'invisible':[('is_student','=',False)]}" icon="fa-calendar"
+                                                 context="{'default_partner_id': active_id}">
+                                        <span class="o_stat_text">Timing</span>
+
+                                                </button>
+                       </div>
+
+
+                             <div name="button_box"  position="after">
+                             <div name="button_box2" class="oe_button_box">
+                                  <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_worker" attrs="{'invisible':[('show_achievement','=',False)]}" icon="fa-users"
+                         context="{'default_partner_id': active_id}">
+                              <span class="o_stat_text">Worker</span>
+
+                        </button><button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_resident" attrs="{'invisible':[('show_achievement','=',False)]}" icon="fa-child"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Resident</span>
+
+                        </button>
+                                 <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_other" attrs="{'invisible':[('show_achievement','=',False)]}" icon="fa-star"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Other</span>
+                        </button>
+                             </div>
+                                 <div name="button_box3" class="oe_button_box">
+                                  <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_morning" attrs="{'invisible':[('show_resident','=',False)]}" icon="fa-sun-o"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Morning Tasks</span>
+                        </button><button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_night" attrs="{'invisible':[('show_resident','=',False)]}" icon="fa-moon-o"
+                         context="{'default_partner_id': active_id}">
+                          <span class="o_stat_text">Night tasks</span>
+                        </button>
+                                     <button class="oe_stat_button o_res_partner_tip_opp" type="object" name="open_achievement_periodic" attrs="{'invisible':[('show_resident','=',False)]}" icon="fa-list-alt"
+                         context="{'default_partner_id': active_id}">
+                        <span class="o_stat_text">Periodic tasks</span>
+                        </button>
+                             </div>
+                             </div>
+
+       </field>
+   </record>
+<!--     <record id="res_partner_view_purchase_account_button" model="ir.ui.view">-->
+<!--         <field name="name">res.partner</field>-->
+<!--         <field name="model">res.partner</field>-->
+<!--         <field name="inherit_id" ref="purchase.res_partner_view_purchase_account_buttons"/>-->
+<!--         <field name="arch" type="xml">-->
+
+<!--             <xpath expr="//button[@name='%(purchase.act_res_partner_2_supplier_invoices)d']" position="attributes">-->
+<!--                     <attribute name="attrs">{'invisible':[('is_student','=',True)]}</attribute>-->
+<!--             </xpath>-->
+
+<!--         </field>-->
+<!--     </record>-->
+<!--     <record id="res_partner_view_purchase_buttons" model="ir.ui.view">-->
+<!--         <field name="name">res.partner</field>-->
+<!--         <field name="model">res.partner</field>-->
+<!--         <field name="inherit_id" ref="purchase.res_partner_view_purchase_buttons"/>-->
+<!--         <field name="arch" type="xml">-->
+
+<!--             <xpath expr="//button[@name='%(purchase.act_res_partner_2_purchase_order)d']" position="attributes">-->
+<!--                     <attribute name="attrs">{'invisible':[('is_student','=',True)]}</attribute>-->
+<!--             </xpath>-->
+
+<!--         </field>-->
+<!--     </record>-->
+<!--    <record id="res_partner_view_purchase_buttons_inherit" model="ir.ui.view">-->
+<!--         <field name="name">res.partner</field>-->
+<!--         <field name="model">res.partner</field>-->
+<!--         <field name="inherit_id" ref="purchase_stock.res_partner_view_purchase_buttons_inherit"/>-->
+<!--         <field name="arch" type="xml">-->
+
+<!--             <xpath expr="//button[@name='%(purchase_stock.action_purchase_vendor_delay_report)d']" position="attributes">-->
+<!--                     <attribute name="attrs">{'invisible':[('is_student','=',True)]}</attribute>-->
+<!--             </xpath>-->
+
+<!--         </field>-->
+<!--     </record>-->
+<!--    <record id="res_partner_view_buttons" model="ir.ui.view">-->
+<!--         <field name="name">res.partner</field>-->
+<!--         <field name="model">res.partner</field>-->
+<!--         <field name="inherit_id" ref="sale.res_partner_view_buttons"/>-->
+<!--         <field name="arch" type="xml">-->
+
+<!--             <xpath expr="//button[@name='action_view_sale_order']" position="attributes">-->
+<!--                     <attribute name="attrs">{'invisible':[('is_student','=',True)]}</attribute>-->
+<!--             </xpath>-->
+
+<!--         </field>-->
+<!--     </record>-->
+<!--    <record id="view_partners_form_calender" model="ir.ui.view">-->
+<!--         <field name="name">res.partner</field>-->
+<!--         <field name="model">res.partner</field>-->
+<!--         <field name="inherit_id" ref="calendar.view_partners_form"/>-->
+<!--         <field name="arch" type="xml">-->
+
+<!--             <xpath expr="//button[@name='schedule_meeting']" position="attributes">-->
+<!--                     <attribute name="attrs">{'invisible':[('is_student','=',True)]}</attribute>-->
+<!--             </xpath>-->
+
+<!--         </field>-->
+<!--     </record>-->
+</odoo>

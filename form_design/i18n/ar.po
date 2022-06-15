@@ -1,0 +1,1183 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* form_design
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-29 15:26+0000\n"
+"PO-Revision-Date: 2022-03-29 15:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: form_design
+#: model:ir.actions.report,print_report_name:form_design.action_report_form_line
+msgid ""
+"'Form - %s - %s - %s' % (object.form_id.name, object.form_line_id.title,\n"
+"                object.apply_id.partner_id.name)\n"
+"            "
+msgstr ""
+
+#. module: form_design
+#: model:ir.actions.report,print_report_name:form_design.action_report_picking
+msgid ""
+"'Form - %s - %s' % (object.form_id.name or 'Form', object.partner_id.name)\n"
+"            "
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_kanban
+msgid "<span>)</span>"
+msgstr ")"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply_line
+msgid "<span>Answer :</span>"
+msgstr "الاجابة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply
+msgid "<span>Customer :</span>"
+msgstr "الطالب"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply
+msgid "<span>Date :</span>"
+msgstr "التاريخ"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply_line
+msgid "<span>Employee :</span>"
+msgstr "الموظف"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_kanban
+msgid "<span>Filled out Forms (</span>"
+msgstr "اﻹستمارة المملؤة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply_line
+msgid "<span>Form :</span>"
+msgstr "إستمارة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply_line
+msgid "<span>Note :</span>"
+msgstr "ملاحظة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.report_form_apply_line
+msgid "<span>Partner :</span>"
+msgstr "الطالب"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_res_partner__show_achievement
+#: model:ir.model.fields,field_description:form_design.field_res_users__show_achievement
+msgid "Achievement"
+msgstr "معدل الانجاز"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Achievement</span>"
+msgstr " معدل الانجاز"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__type__achievement
+msgid "Achievement Rate"
+msgstr "معدل الانجاز"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_needaction
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__active
+msgid "Active"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_exception_decoration
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_state
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_type_icon
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__allow_add
+#: model:ir.model.fields,field_description:form_design.field_form_design__allow_add
+msgid "Allow Add Line"
+msgstr "السماح بأضافه بنود"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__answer
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__text
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__text_char
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__value_id
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view2
+msgid "Answer"
+msgstr "الاجابة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__textChar
+msgid "Answer Char"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__date
+msgid "Answer Date"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__date_time
+msgid "Answer DateTime"
+msgstr "أجابة التاريخ والوقت"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__value_ids
+msgid "Answer Many"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__text
+msgid "Answer Text"
+msgstr "أجابة نصية"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__time
+msgid "Answer Time"
+msgstr "وقت"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__value
+msgid "Answer Value"
+msgstr ""
+
+#. module: form_design
+#: code:addons/form_design/models/apply.py:0
+#: code:addons/form_design/models/apply.py:0
+#: code:addons/form_design/models/apply.py:0
+#: code:addons/form_design/models/apply.py:0
+#: model:ir.model,name:form_design.model_form_line_answer
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__matrix_answer_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__suggested_answer_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__value_answer_ids
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__value_ids
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+#, python-format
+msgid "Answers"
+msgstr "الأجابات"
+
+#. module: form_design
+#: model:ir.model,name:form_design.model_form_line_value
+msgid "Answers Values"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__apply_ids
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__apply_id
+msgid "Apply"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__assign_type
+msgid "Assign To"
+msgstr "مخصص الي"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_attachment_count
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: form_design
+#: model:ir.actions.server,name:form_design.auto_send_reminder_high_ir_actions_server
+#: model:ir.cron,cron_name:form_design.auto_send_reminder_high
+#: model:ir.cron,name:form_design.auto_send_reminder_high
+msgid "Auto Send notification Mail High Level"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__can_edit
+msgid "Can Edit"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__check
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__check
+msgid "Check"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__boolean
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__boolean
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__boolean
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__check
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__boolean
+msgid "CheckBox"
+msgstr "مربع الاختيار"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_line_answer_form
+msgid "Choices"
+msgstr "الأختيارات"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_line_answer_form
+msgid "Choices Values"
+msgstr "قيم الاجابات"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply__state__done
+msgid "Closed"
+msgstr "المنتهية"
+
+#. module: form_design
+#: model:ir.ui.menu,name:form_design.form_apply_menu_closed
+msgid "Closed Filled Out Forms"
+msgstr "الاستمارات التى تم ملئها"
+
+#. module: form_design
+#: model:ir.actions.act_window,name:form_design.form_apply_action_done_window
+msgid "Closed Forms"
+msgstr "الاستمارات التى تم ملئها"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__col_id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__val_name
+msgid "Col"
+msgstr "العمود"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+msgid "Col Answers"
+msgstr "اﻷعمدة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__color
+msgid "Color Index"
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_line_answer_form
+msgid "Column Type"
+msgstr "نوع العمود"
+
+#. module: form_design
+#: model:ir.model,name:form_design.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__create_uid
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__create_uid
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__create_uid
+#: model:ir.model.fields,field_description:form_design.field_form_design__create_uid
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__create_uid
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__create_uid
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__create_date
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__create_date
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__create_date
+#: model:ir.model.fields,field_description:form_design.field_form_design__create_date
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__create_date
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__create_date
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_coltype__custom
+msgid "Custom"
+msgstr "مخصص"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__date
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__date
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__date
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__date
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__date
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__date
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__date
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__date_time
+msgid "Date Time"
+msgstr "وقت وتاريخ"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__datetime
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__datetime
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__datetime
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__datetime
+msgid "DateTime"
+msgstr "وقت وتاريخ"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__datetime
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__datetime
+msgid "Datetime"
+msgstr "التاريخ والوقت"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_coltype__month
+msgid "Days of the Month"
+msgstr "أيام الشهر"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_coltype__week
+msgid "Days of the Week"
+msgstr "أيام الأسبوع"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__description
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__description
+msgid "Description"
+msgstr "وصف"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view2
+msgid "Discard"
+msgstr "إلغاء"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__display_name
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__display_name
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__display_name
+#: model:ir.model.fields,field_description:form_design.field_form_design__display_name
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__display_name
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__display_name
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view2
+msgid "Done"
+msgstr "إنهاء"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply__state__draft
+msgid "Draft"
+msgstr "جديد"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__description_done
+msgid "End Message"
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_tree_view
+msgid "Fill form"
+msgstr "أملئ الاستمارة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_view
+msgid "Filled out Forms"
+msgstr "اﻷستمارات المملؤة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_follower_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_partner_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__activity_type_icon
+#: model:ir.model.fields,help:form_design.field_form_design__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: form_design
+#: model:ir.actions.report,name:form_design.action_report_picking
+#: model:ir.model.fields,field_description:form_design.field_form_apply__form_id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__form_id
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__form_id
+msgid "Form"
+msgstr "إستمارة"
+
+#. module: form_design
+#: model:res.groups,name:form_design.group_form_manager
+msgid "Form Administrator"
+msgstr ""
+
+#. module: form_design
+#: model:ir.actions.act_window,name:form_design.form_answers_line_action_window
+msgid "Form Answers Line"
+msgstr "أجابات اﻷستمارات"
+
+#. module: form_design
+#: model:ir.model,name:form_design.model_form_apply
+msgid "Form Apply"
+msgstr "ملئ اﻷستمارات"
+
+#. module: form_design
+#: model:ir.model,name:form_design.model_form_apply_line
+msgid "Form Apply Line"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model,name:form_design.model_form_apply_line_matrix
+msgid "Form Apply Line Matrix"
+msgstr ""
+
+#. module: form_design
+#: model:ir.actions.act_window,name:form_design.form_design_action_window
+#: model:ir.model,name:form_design.model_form_design
+#: model:ir.ui.menu,name:form_design.form_design_menu_root
+msgid "Form Design"
+msgstr "تصميم الإستمارات"
+
+#. module: form_design
+#: model:ir.model,name:form_design.model_form_design_line
+msgid "Form Design Line"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__form_ids
+msgid "Form Fill In"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__fill_count
+msgid "Form Fill In count"
+msgstr "عدد اﻷستمارات المملؤة"
+
+#. module: form_design
+#: model:ir.actions.act_window,name:form_design.form_apply_action_window
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__apply_id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__form_line_id
+#: model:ir.ui.menu,name:form_design.form_apply_menu_root
+msgid "Form Fill Out"
+msgstr "ملء إستمارة"
+
+#. module: form_design
+#: model:ir.actions.act_window,name:form_design.form_apply_line_action_window
+#: model:ir.ui.menu,name:form_design.form_apply_line_menu_root
+msgid "Form Fill Out Line"
+msgstr "عناصر ملء إستمارة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design__name
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_kanban
+#: model_terms:ir.ui.view,arch_db:form_design.form_line_kanban
+msgid "Form Title"
+msgstr "اسم الاستمارة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__form_type
+#: model:ir.model.fields,field_description:form_design.field_form_design__type
+msgid "Form Type"
+msgstr "نوع اﻷستمارة"
+
+#. module: form_design
+#: model:res.groups,name:form_design.group_form_user
+msgid "Form User"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__has_message
+#: model:ir.model.fields,field_description:form_design.field_form_design__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__has_next
+msgid "Has Next"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__id
+#: model:ir.model.fields,field_description:form_design.field_form_design__id
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__id
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__id
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__id
+msgid "ID"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_exception_icon
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__activity_exception_icon
+#: model:ir.model.fields,help:form_design.field_form_design__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__message_needaction
+#: model:ir.model.fields,help:form_design.field_form_apply__message_unread
+#: model:ir.model.fields,help:form_design.field_form_design__message_needaction
+#: model:ir.model.fields,help:form_design.field_form_design__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__message_has_error
+#: model:ir.model.fields,help:form_design.field_form_apply__message_has_sms_error
+#: model:ir.model.fields,help:form_design.field_form_design__message_has_error
+#: model:ir.model.fields,help:form_design.field_form_design__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_is_follower
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__is_header
+msgid "Is Header"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__is_required
+msgid "Is Required"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_res_partner__is_student
+#: model:ir.model.fields,field_description:form_design.field_res_users__is_student
+msgid "Is Student"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__is_header
+msgid "Is a Header"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__is_required
+msgid "Is a Required"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__is_correct
+msgid "Is a correct answer"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__sequence
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__sequence
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__sequence
+msgid "Label Sequence order"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply____last_update
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line____last_update
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix____last_update
+#: model:ir.model.fields,field_description:form_design.field_form_design____last_update
+#: model:ir.model.fields,field_description:form_design.field_form_design_line____last_update
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer____last_update
+#: model:ir.model.fields,field_description:form_design.field_form_line_value____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__write_uid
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__write_uid
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__write_uid
+#: model:ir.model.fields,field_description:form_design.field_form_design__write_uid
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__write_uid
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__write_uid
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__write_date
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__write_date
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__write_date
+#: model:ir.model.fields,field_description:form_design.field_form_design__write_date
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__write_date
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__write_date
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__write_date
+msgid "Last Updated on"
+msgstr "أخر تعديل تم في"
+
+#. module: form_design
+#: model:ir.actions.report,name:form_design.action_report_form_line
+msgid "Line"
+msgstr "العنصر"
+
+#. module: form_design
+#: code:addons/form_design/models/apply.py:0
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_form_view
+#, python-format
+msgid "Lines"
+msgstr "العناصر"
+
+#. module: form_design
+#: code:addons/form_design/models/apply.py:0
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_form_view
+#, python-format
+msgid "Closed Form Cannot be deleted"
+msgstr "لا يمكن حذف النموذج المغلق"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_main_attachment_id
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__matrix_id
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__matrix
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__matrix
+msgid "Matrix"
+msgstr "المصفوفة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__answers_ids
+msgid "Matrix Answer"
+msgstr "أجابة المصفوفة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__matrix_answer_type
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__type
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__matrix_answer_type
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__type
+msgid "Matrix Answer Type"
+msgstr "نوع أجابة المصفوفة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__matrix_coltype
+msgid "Matrix Columns"
+msgstr "أعمدة المصفوفة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__matrix_line_id
+msgid "Matrix Line"
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+msgid "Matrix Rows Values"
+msgstr "قيم صفوف المصفوفة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__matrix_subtype
+msgid "Matrix Type"
+msgstr "نوع المصفوفة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Measurements</span>"
+msgstr " القياسات البدنية"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Closed Forms</span>"
+msgstr "<span class=\"o_stat_text\">استمارات مغلقة</span>"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__type__medical
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Medical File</span>"
+msgstr "الملف الطبى"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_has_error
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Morning Tasks</span>"
+msgstr "عناية شخصية"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__task_type__morning
+msgid "Morning tasks"
+msgstr "عناية شخصية"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__text
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__text_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__text
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__text
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__text_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__text
+msgid "Multiple Lines Text Box"
+msgstr "مربع نص متعدد الأسطر"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__multi
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__multi
+msgid "Multiple Types"
+msgstr "قيم متعددة"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__multiple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__multiple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__multiple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__multiple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__multiple_choice
+msgid "Multiple choice: multiple answers allowed"
+msgstr "اختيار من متعدد: يُسمح باختيار أكثر من إجابة"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__simple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__simple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__simple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__simple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__simple_choice
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__simple_choice
+msgid "Multiple choice: only one answer"
+msgstr "اختيار من متعدد: إجابة واحدة فقط"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_subtype__multiple
+msgid "Multiple choices per row"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__my_activity_date_deadline
+#: model:ir.model.fields,field_description:form_design.field_form_design__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__complete_name
+msgid "Name"
+msgstr "اﻷسم"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view2
+msgid "Next"
+msgstr "التالي"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_date_deadline
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_summary
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_type_id
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Night tasks</span>"
+msgstr "جلسات"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__task_type__night
+msgid "Night tasks"
+msgstr "جلسات"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__note
+msgid "Note"
+msgstr "ملاحظات"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__notify_ids
+msgid "Notification To"
+msgstr "ارسال تنبيه ألي"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__notify_time
+msgid "Notify Time"
+msgstr "وفت التنبيه"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_needaction_counter
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_has_error_counter
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__message_needaction_counter
+#: model:ir.model.fields,help:form_design.field_form_design__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__message_has_error_counter
+#: model:ir.model.fields,help:form_design.field_form_design__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__message_unread_counter
+#: model:ir.model.fields,help:form_design.field_form_design__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__numerical_box
+msgid "Numerical"
+msgstr "قيمة رقمية"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__numerical_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__numerical_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__numerical_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__numerical_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__numerical_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__numerical_box
+msgid "Numerical Value"
+msgstr "قيمة عددية"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Nutrition</span>"
+msgstr "التغذية العلاجية"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_subtype__simple
+msgid "One choice per row"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__assign_type__other
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "Other"
+msgstr "أخري"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Other</span>"
+msgstr "أخري"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__partner_id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__partner_id
+msgid "Partner"
+msgstr "العميل"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__category
+#: model:ir.model.fields,field_description:form_design.field_form_design__category
+msgid "Partner Category"
+msgstr "تصنيف العميل"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__task_type__periodic
+msgid "Periodic tasks"
+msgstr "سلوكى"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Periodic tasks</span>"
+msgstr "سلوكى"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__type__physical
+msgid "<span class=\"o_stat_text\">Physical Measurements</span>"
+msgstr "القياسات البدنية"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view2
+msgid "Print"
+msgstr "طباعة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_kanban
+msgid "Product Image"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__form_line_id
+#: model:ir.model.fields,field_description:form_design.field_form_design__question_ids
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__question_id
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__question_id
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_line_view
+msgid "Question"
+msgstr "السؤال"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__matrix_question_id
+msgid "Question (as matrix row)"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__question_type
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__question_type
+msgid "Question Type"
+msgstr "نوع السؤال"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_form_view
+msgid "Questions"
+msgstr "سؤال"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_form_view
+msgid "Register"
+msgstr "تسجيل"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_form_view
+msgid "Reset to Draft"
+msgstr "أعادة فتح"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_res_partner__show_resident
+#: model:ir.model.fields,field_description:form_design.field_res_users__show_resident
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__assign_type__resident
+msgid "Resident"
+msgstr "مقيم"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Resident</span>"
+msgstr "طالب"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__user_id
+#: model:ir.model.fields,field_description:form_design.field_form_design__res_id
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__user_id
+msgid "Responsible"
+msgstr "المسئول"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__employee_id
+msgid "Responsible Employee"
+msgstr "المسئول"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__activity_user_id
+#: model:ir.model.fields,field_description:form_design.field_form_design__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line_matrix__name
+msgid "Row"
+msgstr "صف"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__message_has_sms_error
+#: model:ir.model.fields,field_description:form_design.field_form_design__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في ارسال الرسالة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_line_form_view2
+msgid "Save and Close"
+msgstr "حفظ و اغلاق"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_value__name
+msgid "Selection value"
+msgstr "اختيار"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__sequence
+msgid "Sequence"
+msgstr "الترتيب"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_form_view
+msgid "Set Close"
+msgstr "غلق"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__char
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__char_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__char
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__char
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__question_type__char_box
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__char
+msgid "Single Line Text Box"
+msgstr "مربع نص سطر واحد"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__state
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__activity_state
+#: model:ir.model.fields,help:form_design.field_form_design__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr "حالة المهام"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__suggested_id
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__suggested_ids
+msgid "Suggested Answer"
+msgstr "الاجابات المقترحة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_line_answer__value
+msgid "Suggested value"
+msgstr "القيم المقترحة"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__task_type
+#: model:ir.model.fields,field_description:form_design.field_form_design__task_type
+msgid "Tasks"
+msgstr "المهام"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__type__nutrition
+msgid "Therapeutic Nutrition"
+msgstr "التغذية العلاجية"
+
+#. module: form_design
+#: model:ir.model.constraint,message:form_design.constraint_form_apply_form_partner_day_uniq
+msgid "This form already exist"
+msgstr "تم ملئ اﻷستمارة من قبل"
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_design__description_done
+msgid "This message will be displayed when survey is completed"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__matrix_answer_type__time
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line_matrix__type__time
+#: model:ir.model.fields.selection,name:form_design.selection__form_design_line__matrix_answer_type__time
+#: model:ir.model.fields.selection,name:form_design.selection__form_line_answer__type__time
+msgid "Time"
+msgstr "وقت"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Timing</span>"
+msgstr "مواعيد"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__type__timing
+msgid "Timing Form"
+msgstr "استمارة مواعيد"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply_line__name
+#: model:ir.model.fields,field_description:form_design.field_form_design_line__title
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_view
+msgid "Title"
+msgstr "العنوان"
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_apply_line__question_type__check
+msgid "True or False"
+msgstr "صح أو خطأ"
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__type
+msgid "Type"
+msgstr "نوع"
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_design_line__description
+msgid ""
+"Use this field to add additional explanations about your question or to "
+"illustrate it with pictures or a video"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,field_description:form_design.field_form_apply__website_message_ids
+#: model:ir.model.fields,field_description:form_design.field_form_design__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields,help:form_design.field_form_apply__website_message_ids
+#: model:ir.model.fields,help:form_design.field_form_design__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: form_design
+#: model:ir.model.fields.selection,name:form_design.selection__form_design__assign_type__worker
+msgid "Worker"
+msgstr "النظافة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.view_partner_form
+msgid "<span class=\"o_stat_text\">Worker</span>"
+msgstr "النظافة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_design_tree_view
+msgid "form"
+msgstr "إستمارة"
+
+#. module: form_design
+#: model_terms:ir.ui.view,arch_db:form_design.form_apply_search
+msgid "string"
+msgstr "نص"
+
