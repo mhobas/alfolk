@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+     <template id="room_report_management_template">
+         <t t-call="web.html_container">
+              <t t-call="web.external_layout">
+                     <div class="page">
+                          <h3 class="text-center" style="color:#191970 ; font-family:serif">استمارة خاصة بحجز الغرف
+                    </h3>
+                         <table class="table table-bordered">
+                             <tr style="background-color:gray;text-align:center">
+                                 <th>أسم/كود النزيل</th>
+                                  <th>غرفة</th>
+                                 <th>سرير</th>
+                                  <th>محجوز من تاريخ</th>
+                                 <th>الى تاريخ</th>
+                                 <th>المسئول</th>
+                             </tr>
+                              <t t-foreach="docs" t-as="o">
+                                 <tr>
+                                     <td><span t-field="o.partner_name"/></td>
+                                     <td><span t-field="o.room_id"/></td>
+                                     <td><span t-field="o.bed_id"/></td>
+                                     <td><span t-field="o.bed_reserve_from"/></td>
+                                     <td><span t-field="o.bed_reserve_to"/></td>
+                                     <td><span t-field="o.responsible_id"/></td>
+
+                                 </tr>
+
+                              </t>
+
+                         </table>
+
+                     </div>
+
+              </t>
+         </t>
+
+     </template>
+    </data>
+</odoo>

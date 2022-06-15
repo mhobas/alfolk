@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <report
+                id="room_reserved_report"
+                string="Room Reserved Report"
+                name="room_management.room_report_management_template"
+                model="folk.rooms.accommodations"
+                report_type="qweb-pdf"
+           />
+<!--        report type="qweb-html"-->
+    </data>
+</odoo>
