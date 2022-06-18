@@ -1,0 +1,221 @@
+<odoo>
+    <data>
+
+        <record id="view_product_edit_form" model="ir.ui.view">
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='detailed_type']" position="before">
+                    <field name="medication"/>
+                    <field name="pro_type"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_pick_edit_form" model="ir.ui.view">
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='origin']" position="before">
+                    <field name="med_id"/>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="alfolk_medication_chart_record_list">
+            <field name="name">alfolk_medication_chart_record_list</field>
+            <field name="model">medication.planning</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="person"/>
+                    <field name="medication_duration"/>
+                    <field name="warehouse"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_account_payment_register_form" model="ir.ui.view">
+            <field name="name">alfolk.medication.chart.record.day.form</field>
+            <field name="model">medication.planning.day</field>
+            <field name="arch" type="xml">
+                <form string="Register Medication">
+                    <group>
+                        <field name="employee"/>
+                        <field name="medication"/>
+                        <field name="quantity" force_save="1"/>
+                        <field name="day"/>
+                        <field name="products" invisible="1"/>
+                        <field name="line_ids" invisible="1"/>
+
+
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- form -->
+        <record id="medication_planning_form" model="ir.ui.view">
+            <field name="name">alfolk.medication.chart.record.form</field>
+            <field name="model">medication.planning</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="create_picking"
+                                string="Send Picking"
+                                type="object"
+                                class="oe_highlight"
+                                states="draft"
+                        />
+                        <button name="action_register_day"
+                                string="Register Medication Day"
+                                type="object"
+                                class="oe_highlight"
+                                states="receive_med"
+                        />
+                        <button name="create_residual"
+                                string="Return Quantity"
+                                type="object"
+                                attrs="{'invisible': [('total', '=', 0)]}"
+                        />
+                        <button name="close"
+                                string="Close"
+                                type="object"
+                                states="record_date"/>
+
+
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,picking,receive_med,record_date,close"
+                               statusbar_colors='{"draft":"blue"}'/>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object"
+                                    name="action_view_delivery"
+                                    class="oe_stat_button"
+                                    icon="fa-truck"
+                                    attrs="{'invisible': [('delivery_count', '=', 0)]}">
+                                <field name="delivery_count" widget="statinfo" string="Delivery"/>
+                            </button>
+                        </div>
+
+                        <group>
+                            <field name="category"
+                                   attrs="{'readonly':[('state','in',('close','picking','receive_med','record_date'))]}"/>
+                            <field name="person"
+                                   attrs="{'readonly':[('state','in',('close','picking','receive_med','record_date'))]}"/>
+                            <field name="warehouse"
+                                   attrs="{'readonly':[('state','in',('close','picking','receive_med','record_date'))]}"/>
+
+                            <field name="med_type"
+                                   attrs="{'readonly':[('state','in',('close','picking','receive_med','record_date'))]}"/>
+                            <field name="location" attrs="{'readonly':[('state','=','close')],'invisible':1}"/>
+                            <field name="location_des" attrs="{'readonly':[('state','=','close')],'invisible':1}"/>
+                            <field name="picking_type" attrs="{'readonly':[('state','=','close')],'invisible':1}"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="employee_id" invisible="1"/>
+                            <field name="products" invisible="1"/>
+                            <field name="picking_ids" invisible="1"/>
+                            <field name="total" invisible="1"/>
+
+                        </group>
+                        <group>
+                            <notebook>
+                                <page string="Medicament Information">
+
+                                    <field name="line_id" attrs="{'readonly':[('state','=','close')]}">
+                                        <tree editable="bottom">
+                                            <field name="medication"
+                                                   attrs="{'readonly':[('state','in',('close','picking','receive_med'))],'required':1}"/>
+                                            <field name="qty"/>
+                                            <field name="unit"/>
+                                            <field name="number"/>
+                                            <field name="no_days"/>
+                                            <field name="day"/>
+                                            <field name="product_uom_category_id" invisible="1"/>
+                                            <field name="quantity"
+                                                   attrs="{'readonly':[('state','in',('close','picking','receive_med'))],'required':1}"/>
+                                            <field name="product_uom_id"
+                                                   attrs="{'readonly':[('state','in',('close','picking','receive_med'))],'required':1}"/>
+                                            <field name="quantity_received" invisible="0" readonly="1" force_save="1"/>
+                                            <field name="quantity_returned" invisible="0" readonly="1" force_save="1"/>
+                                            <field name="quantity_re" invisible="0"/>
+                                            <field name="product_uom_ids" invisible="0"/>
+                                            <field name="state" invisible="1"/>
+                                            <field name="employee" invisible="1"/>
+                                            <field name="notes" invisible="1"/>
+
+
+                                        </tree>
+                                    </field>
+
+                                </page>
+
+                                <page string="Medicament Times">
+
+                                    <field name="line_ids" attrs="{'readonly':[('state','=','close')]}">
+                                        <tree editable="bottom">
+                                            <field name="medication"/>
+                                            <field name="day"/>
+                                            <field name="quantity"/>
+                                            <field name="employee"/>
+                                            <field name="is_taken"/>
+                                            <field name="products" invisible="1"/>
+                                            <field name="state" invisible="1"/>
+
+                                        </tree>
+                                    </field>
+
+                                </page>
+
+                            </notebook>
+
+                        </group>
+
+
+                    </sheet>
+                                        <div class="o_attachment_preview"/>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <!-- actions opening views on models -->
+ <record id="medication_planning_search_view" model="ir.ui.view">
+        <field name="name">medication.planning.search</field>
+        <field name="model">medication.planning</field>
+        <field name="arch" type="xml">
+            <search string="Medication Planning">
+                <field name="person" string="Partner" filter_domain="['|',
+                    ('person.name', '=', self),
+                    ('person.code', '=', self)]"/>
+
+
+                <separator/>
+                <group expand="1" string="Group By">
+                    <filter string="Partner" name="person" context="{'group_by':'person'}"/>
+
+
+
+                </group>
+            </search>
+        </field>
+    </record>
+        <record model="ir.actions.act_window" id="medication_planning_action_window">
+            <field name="name">Medication Planned</field>
+            <field name="res_model">medication.planning</field>
+            <field name="view_mode">tree,form,search,pivot,kanban</field>
+        </record>
+
+
+        <!-- Top menu item -->
+
+        <menuitem name="Medication Planned" id="medication_planning_menu_root"
+                  web_icon="medication_planning,static/description/medicien.png"
+                  action="medication_planning_action_window"/>
+
+        <!-- menu categories -->
+
+
+    </data>
+</odoo>
