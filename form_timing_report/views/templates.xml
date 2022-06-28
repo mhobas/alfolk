@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <template id="timing_report">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+
+                        <div class="page">
+
+                            <h3 class="text-center">تقرير استمارة المواعيد
+                            </h3>
+
+                               <field name="o.partner_id"/>
+
+                            <br/>
+                            <table class="table table-bordered mt32" style="width:100%;border: 1px bold;">
+                                <thead>
+                                    <tr>
+                                        <th/>
+                                        <t t-foreach="o.get_field_row()" t-as="answer">
+                                            <th>
+                                                <span t-esc="answer.value"/>
+                                            </th>
+                                        </t>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="invoice_tbody">
+                                    <t t-foreach="o.get_field_col()" t-as="answer">
+                                        <tr t-if="answer">
+                                            <td t-if="answer">
+                                                <span t-esc="answer"/><br/>
+                                                <span t-esc="o.get_day(answer.weekday())"/>
+                                            </td>
+                                            <t t-foreach="o.get_field_row()" t-as="row">
+                                                <td>
+                                          <span t-esc="o.get_filed_value(answer,row)['value']" />
+
+                                                </td>
+                                            </t>
+
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <report
+                id="report_template_timing"
+                model="form.timing.report"
+                report_type="qweb-pdf"
+                string="print"
+                name="form_timing_report.timing_report"
+                file="form_timing_report.timing_report"
+        />
+    </data>
+</odoo>
