@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+    <record id="form_timing_report" model="ir.ui.view">
+        <field name="name">form.timing.report</field>
+        <field name="model">form.timing.report</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                      <group>
+
+                        <field name="partner_id"/>
+                        <field name="form_id"/>
+                    </group>
+                  <group>
+                        <field name="from_date"/>
+                        <field name="to_date"/>
+                    </group>
+                    </group>
+                </sheet>
+                   <footer>
+                    <button name="print_pdf" string="Print" icon="fa-print" type="object" default_focus="1"
+                            class="oe_highlight"/>
+                    <button string="Cancel" icon="fa-close" class="btn btn-primary" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="form_timing_report_action" model="ir.actions.act_window">
+        <field name="name">Timing Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">form.timing.report</field>
+         <field name="view_mode">form</field>
+        <field name="view_id" ref="form_timing_report"/>
+        <field name="target">new</field>
+    </record>
+      <!-- This Menu Item must have a parent and an action -->
+      <menuitem id="form_timing_report_menu_item" name="Timing Report"  action="form_timing_report_action" />
+  </data>
+</odoo>
